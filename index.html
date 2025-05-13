@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SYSTEMS PLUS COLLEGE OF FOUNDATION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" alt="SPCF Logo">
+            <span class="brand"><strong>SYSTEMS </strong>PLUS<br><small>COLLEGE OF FOUNDATION</small></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="program.html">PROGRAM</a></li>
+            <li><a href="facilities.html">FACILITIES</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <div class="slider">
+        <img src="image/spcf1.jpg" id="slide" alt="Slide Image">
+        <div class="overlay-text">
+            <h1><span class="highlight">Systems Plus</span> College Foundation</h1>
+        </div>
+    </div>
+    <button class="nav-btn left" onclick="prevSlide()">&#10094;</button>
+    <button class="nav-btn right" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <div class="welcome-text">
+                <h4></h4>
+                <h1>Welcome to Systems Plus<br>College Foundation</h1>
+                <p>Welcome to a place where students are not just taught but inspired. At SPCF, we create an environment that feels like home. Supportive, driven, and full of opportunity.</p>
+                <p>At Systems Plus College Foundation, you're more than a student. You're family. We help you grow, discover your passion, and succeed at every step.</p>
+            </div>
+            <div class="welcome-image">
+                <img src="image/logo.png" alt="Welcome to School">
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-content">
+            <div class="info-image">
+                <img src="image/ccislogo.png" alt="Student with Globe">
+            </div>
+            <div class="info-text">
+                <h1>Professional & Inspiring</h1>
+                <p>Empowering students with the knowledge, skills, and values to thrive in a dynamic world. At SPCF, we don't just teach. We transform futures.</p>
+                <p>Dedicated to academic excellence, innovation, and holistic development. Systems Plus College Foundation is where tomorrow’s leaders begin their journey.</p>
+            </div>
+        </div>
+        <script>
+            const images = [
+                "image/spcf1.jpg",
+                "image/spcf2.jpg",
+                "image/spcf3.jpg"
+            ];
+
+            let index = 0;
+            const slide = document.getElementById("slide");
+
+            function showSlide(i) {
+                index = (i + images.length) % images.length;
+                slide.src = images[index];
+            }
+
+            function nextSlide() {
+                showSlide(index + 1);
+            }
+
+            function prevSlide() {
+                showSlide(index - 1);
+            }
+
+            let currentPage = window.location.pathname.split("/").pop();
+            if (currentPage === "" || currentPage === "index.html") {
+                currentPage = "index.html";
+            }
+
+            document.querySelectorAll(".nav-links a").forEach(link => {
+                const href = link.getAttribute("href");
+                if (href === currentPage) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+
+        </script>
+
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-address">
+                <h3>Address</h3>
+                <p>Sta. Isabel Bldg., Balibago, Angeles City</p>
+            </div>
+
+            <div class="footer-branches">
+                <h3>Contact Numbers</h3>
+                <ul>
+                    <li><strong>SPCF Main:</strong> 0919-069-2914</li>
+                    <li><strong>SPCF Miranda Extension:</strong> 0999-228-1083</li>
+                    <li><strong>SPCF San Fernando:</strong> 0999-228-1090, 0999-228-1080</li>
+                </ul>
+            </div>
+
+            <div class="footer-email">
+                <h3>Email</h3>
+                <p><a href="mailto:info@spcf.edu.ph">info@spcf.edu.ph</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

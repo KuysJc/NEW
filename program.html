@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Programs - SYSTEMS PLUS COLLEGE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+            <img src="image/logo.png" alt="SPCF Logo">
+            <span class="brand"><strong>SYSTEMS </strong>PLUS<br><small>COLLEGE OF FOUNDATION</small></span>
+        </div>
+      <span class="brand"><strong>SYSTEMS </strong>PLUS<br><small>COLLEGE OF FOUNDATION</small></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="program.html" class="active">PROGRAM</a></li>
+      <li><a href="facilities.html">FACILITIES</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <section class="course-hero">
+    <img src="image/spcf1.jpg" alt="Students learning" class="hero-image" />
+    <div class="course-hero-overlay">
+      <h1>Our Programs</h1>
+      <p>Explore the various academic offerings at SYSTEMS PLUS COLLEGE.</p>
+    </div>
+  </section>
+
+  <section class="program-section">
+    <div class="program-card">
+      <img src="image/bscs.jpg" alt="Bachelor of Science in Computer Science">
+      <div class="program-content">
+        <h2>Computer Science</h2>
+        <p>This program emphasizes computing concepts, algorithmic foundations, and software engineering. It prepares students for careers such as software engineer, systems analyst, and data analyst. </p>
+        <div class="stars">4.5 ★★★★☆</div>
+      </div>
+      <div class="program-meta">
+        <span>📅 6 Month</span>
+        <span>👨‍🎓 56 Student</span>
+        <span>📚 7 Books</span>
+      </div>
+    </div>
+
+    <div class="program-card">
+      <img src="image/bsit.jpg" alt="Bachelor of Science in Information Technology">
+      <div class="program-content">
+        <h2>Information Technology</h2>
+        <p>Focused on the application and management of IT systems, this program trains students to become IT specialists, network administrators, and web developers.</p>
+        <div class="stars">4.5 ★★★★☆</div>
+      </div>
+      <div class="program-meta">
+        <span>📅 6 Month</span>
+        <span>👨‍🎓 56 Student</span>
+        <span>📚 7 Books</span>
+      </div>
+    </div>
+
+    <div class="program-card">
+      <img src="image/bsis.jpg" alt="Bachelor of Science in Information Systems">
+      <div class="program-content">
+        <h2>Information Systems</h2>
+        <p>Combining business and IT, this program prepares students to design and manage information systems that support organizational operations.</p>
+        <div class="stars">4.5 ★★★★☆</div>
+      </div>
+      <div class="program-meta">
+        <span>📅 6 Month</span>
+        <span>👨‍🎓 56 Student</span>
+        <span>📚 7 Books</span>
+      </div>
+    </div>
+
+    <div class="program-card">
+      <img src="image/bsemc.jpg" alt="Bachelor of Science in Entertainment and Multimedia Computing">
+      <div class="program-content">
+        <h2>Entertainment and Multimedia Computing</h2>
+        <p>This program specializes in digital media, game development, and interactive applications, catering to careers in multimedia design and development.</p>
+        <div class="stars">4.5 ★★★★☆</div>
+      </div>
+      <div class="program-meta">
+        <span>📅 6 Month</span>
+        <span>👨‍🎓 56 Student</span>
+        <span>📚 7 Books</span>
+      </div>
+    </div>
+  </section>
+  <script>
+  let currentPage = window.location.pathname.split("/").pop();
+  if (currentPage === "" || currentPage === "index.html") {
+    currentPage = "index.html";
+  }
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPage) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+</script>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-address">
+      <h3>Address</h3>
+      <p>Sta. Isabel Bldg., Balibago, Angeles City</p>
+    </div>
+    
+    <div class="footer-branches">
+      <h3>Contact Numbers</h3>
+      <ul>
+        <li><strong>SPCF Main:</strong> 0919-069-2914</li>
+        <li><strong>SPCF Miranda Extension:</strong> 0999-228-1083</li>
+        <li><strong>SPCF San Fernando:</strong> 0999-228-1090, 0999-228-1080</li>
+
+      </ul>
+    </div>
+    
+    <div class="footer-email">
+      <h3>Email</h3>
+      <p><a href="mailto:info@spcf.edu.ph">info@spcf.edu.ph</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

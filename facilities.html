@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facilities - SYSTEMS PLUS COLLEGE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+            <img src="image/logo.png" alt="SPCF Logo">
+            <span class="brand"><strong>SYSTEMS </strong>PLUS<br><small>COLLEGE OF FOUNDATION</small></span>
+        </div>
+      <span class="brand"><strong>SYSTEMS </strong>PLUS<br><small>COLLEGE OF FOUNDATION</small></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="program.html">PROGRAM</a></li>
+      <li><a href="facilities.html" class="active">FACILITIES</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <section class="course-hero">
+    <img src="image/spcf1.jpg" alt="Campus Facilities" class="hero-image" />
+    <div class="course-hero-overlay">
+      <h1>Our Facilities</h1>
+      <p>Discover the modern amenities and learning spaces at SYSTEMS PLUS COLLEGE.</p>
+    </div>
+  </section>
+  <!-- Facilities Highlights Section -->
+<section class="facilities-section">
+  <h2>Campus Highlights</h2>
+  <div class="facilities-grid">
+    <div class="facility-card">
+      <img src="image/library.jpg" alt="Library">
+      <h3>Library</h3>
+      <p>A quiet and resource-rich space for study and research.</p>
+    </div>
+    <div class="facility-card">
+      <img src="image/complab.jpg" alt="Computer Laboratory">
+      <h3>Computer Laboratory</h3>
+      <p>Equipped with modern software and high-speed internet access.</p>
+    </div>
+    <div class="facility-card">
+      <img src="image/gym.jpg" alt="Gymnasium">
+      <h3>Gymnasium</h3>
+      <p>A large, multipurpose facility for physical education and sports.</p>
+    </div>
+    
+    <!-- Add more cards as needed -->
+  </div>
+</section>
+
+<!-- Optional: Gallery Section -->
+<section class="gallery-section">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="image/animationlab.jpg" alt="Animation Lab">
+    <img src="image/chapel.jpg" alt="Chapel">
+    <img src="image/theater.jpg" alt="Theater">
+    <img src="image/swimmingpool.jpg" alt="swimming pool">
+    <img src="image/tenniscourt.jpg" alt="Tennis Court">
+    <!-- Add more images as needed -->
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section">
+  <h2>Visit Our Campus</h2>
+  <p>Want to experience our facilities in person?</p>
+  <a href="contact.html" class="cta-button">Contact Us</a>
+</section>
+
+  
+<script>
+  let currentPage = window.location.pathname.split("/").pop();
+  if (currentPage === "" || currentPage === "index.html") {
+    currentPage = "index.html";
+  }
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    const href = link.getAttribute("href");
+    if (href === currentPage) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+</script>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-address">
+      <h3>Address</h3>
+      <p>Sta. Isabel Bldg., Balibago, Angeles City</p>
+    </div>
+    
+    <div class="footer-branches">
+      <h3>Contact Numbers</h3>
+      <ul>
+        <li><strong>SPCF Main:</strong> 0919-069-2914</li>
+        <li><strong>SPCF Miranda Extension:</strong> 0999-228-1083</li>
+        <li><strong>SPCF San Fernando:</strong> 0999-228-1090, 0999-228-1080</li>
+
+      </ul>
+    </div>
+    
+    <div class="footer-email">
+      <h3>Email</h3>
+      <p><a href="mailto:info@spcf.edu.ph">info@spcf.edu.ph</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
