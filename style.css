@@ -518,8 +518,8 @@ body {
   text-decoration: underline;
 } 
 .logo img {
-    width: 100px; /* Adjust this value as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 80px; /* Adjust this value as needed */
+    /* Maintain aspect ratio */
 }
 
 .welcome-image img {
